@@ -107,12 +107,14 @@ public class SeleniumTests {
     void csselocators1() {
         driver.get("https://bonigarcia.dev/selenium-webdriver-java/");
 
-        List<WebElement> webForm = driver.findElements(By.cssSelector("btn-outline-primary"));
+
+        List<WebElement> webForm = driver.findElements(By.cssSelector(".btn-outline-primary"));
         webForm.get(0).click();
 
         String url = driver.getCurrentUrl();
         Assertions.assertEquals("https://bonigarcia.dev/selenium-webdriver-java/web-form.html", url);
     }
+
 
     @Test
     void csselocators2() {
